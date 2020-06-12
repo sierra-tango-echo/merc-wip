@@ -8,7 +8,7 @@ cat << "EOF" > /etc/profile.d/flightcenter.sh
 #Custom PS1 with client name
 [ -f /etc/flightcentersupported ] && c=32 || c=31
 if [ "$PS1" ]; then
-  PS1="[\u@\h\[\e[1;${c}m\][cloud-rscfd1]\[\e[0m\] \W]\\$ "
+  PS1="[\u@\h\[\e[1;${c}m\][nUCLeus]\[\e[0m\] \W]\\$ "
 fi
 EOF
 
@@ -21,8 +21,8 @@ cat << EOF > /etc/hosts
 EOF
 
 cat << EOF > /etc/resolv.conf
-search cloud.pri.rscfd1.alces.network pri.rscfd1.alces.network mgt.rscfd1.alces.network ib.rscfd1.alces.network bmc.mgt.rscfd1.alces.network rscfd1.alces.network whiteways.tech
-nameserver 10.10.0.51
+search cloud.pri.nucleus.alces.network pri.nucleus.alces.network nucleus.alces.network 
+nameserver 10.110.1.254
 EOF
 
 echo 'GATEWAY=10.110.1.254' >> /etc/sysconfig/network-scripts/ifcfg-eth0
