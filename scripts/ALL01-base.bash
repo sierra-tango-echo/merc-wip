@@ -29,8 +29,8 @@ echo 'GATEWAY=10.110.1.254' >> /etc/sysconfig/network-scripts/ifcfg-eth0
 echo 'PEERDNS=no' >> /etc/sysconfig/network-scripts/ifcfg-eth0
 echo 'PEERROUTES=no' >> /etc/sysconfig/network-scripts/ifcfg-eth0
 
-#systemctl disable NetworkManager
-#systemctl mask NetworkManager
+systemctl disable NetworkManager
+systemctl mask NetworkManager
 
 touch /etc/cloud/cloud-init.disabled
 
